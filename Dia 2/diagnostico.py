@@ -1,8 +1,7 @@
-
-nombre = "Alex"
-edad = 31
-altura = 1.73
-estudio_programacion = True
+nombre = input("¿Cuál es tu nombre? ")
+edad = int(input("¿Cuántos años tienes? "))
+altura = float(input("¿Cuál es tu altura en metros? "))
+estudio_programacion = input("¿Estudias programación? (sí/no) ").lower() == "si"
 
 tecnologias = ["Python", "Git", "GitHub", "VS Code"]
 
@@ -27,7 +26,7 @@ for tecno in tecnologias:
 
 
 def saludar(nombre):
-    return f"Hola, {nombre}! Bienvenido a la programacion!"
+    return f"Hola, {nombre}! Bienvenid@ a la programacion!"
     
-saludo = saludar("Alex")
+saludo = saludar(nombre)
 print(saludo)
