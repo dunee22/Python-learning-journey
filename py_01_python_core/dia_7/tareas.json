@@ -1,0 +1,14 @@
+[
+    {
+        "nombre": "terminar dia 3 del roadmap",
+        "completada": false
+    },
+    {
+        "nombre": "jugar persona",
+        "completada": false
+    },
+    {
+        "nombre": "apapachar a los gordos",
+        "completada": true
+    }
+]
