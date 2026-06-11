@@ -134,6 +134,27 @@ def mostrar_titulo(texto):
     print("=" * 50)
 
 
+def buscar_libro_menu():
+    resultados = []
+    busqueda = input("\nIngrese el titulo del libro a buscar: ").strip().lower()
+    
+    if not busqueda:
+        print("El campo no puede estar vacío.")
+        return
+    
+    for libro in biblioteca.libros:
+        if busqueda in libro.titulo.lower():
+            resultados.append(libro)
+        
+    if not resultados:
+        print("No se encontraron resultados")
+    else:
+        print("\nResultados encontrados:")
+        for idx, libro in enumerate(resultados, start=1):
+            estado = "Disponible" if libro.disponible else "Prestado"
+            print(f"{idx}. {libro.titulo} - {libro.autor} | {estado}")
+    
+
 
 while True:
     mostrar_titulo(f"Sistema de Biblioteca - {biblioteca.nombre}")
@@ -145,6 +166,7 @@ while True:
     print("5- Prestar libro ")
     print("6- Devolver libro ")
     print("7- Mostrar libros prestados del usuario ")
+    print("8- Buscar libro ")
     print("8- Salir ")
     
     try:
@@ -168,8 +190,10 @@ while True:
     elif opcion == 7:
         mostrar_libros_usuario_menu()
     elif opcion == 8:
+        buscar_libro_menu()
+    elif opcion == 9:
         print("\nSaliendo del sistema de biblioteca. ¡Hasta luego!")
         break
     else:
-        print("\nOpción no válida. Seleccione una opción del 1 al 8.")
+        print("\nOpción no válida. Seleccione una opción del 1 al 9.")
         
