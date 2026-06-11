@@ -134,9 +134,6 @@ def mostrar_titulo(texto):
     print("=" * 50)
 
 
-def mostrar_separador():
-    print("-" * 50)
-
 
 while True:
     mostrar_titulo(f"Sistema de Biblioteca - {biblioteca.nombre}")
